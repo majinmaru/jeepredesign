@@ -19,10 +19,95 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
-	<header class="header">
+	<header id="header" class="header">
+		<div class="header-logo">
+			<a href="#" class="logo-jeep">
+				<img src="../../common/images/Jeep-logo.png" alt="LOGO" />
+			</a>
+		</div>
+		<a href="#" class="header-showroom">
+			<span class="showroom-quick">
+				<img src="../../common/images/location-icon.png" alt="LOCATION">
+				<span>전시장</span>
+			</span>
+		</a>
+		<div class="header-menu">
+			<span class="menu-link">모델소개</span>
+			<span class="menu-link">구입문의</span>
+			<span class="menu-link">ABOUT JEEP</span>
+			<span class="menu-link">서비스</span>
+		</div>
+		<div class="header-hamburger">
+			<span class="hamburger-icon">
+				<span class="hamburger-icon__line"></span>
+				<span class="hamburger-icon__line"></span>
+				<span class="hamburger-icon__line"></span>
+			</span>
+		</div>
 	</header>
-	<section class="main">
-	</section>
+	<div class="megamenu"></div>
+	<div class="container">
+		<section class="main">
+			<div class="main-left"></div>
+			<div class="main-right">
+				<div class="right-bg">
+					<div class="bg-slide">
+						<img src="./images/01-bg.png" alt="slide-first-bg" />
+					</div>
+				</div>
+			</div>
+			<div class="main-slide">
+				<div class="slide-text">
+					<span class="slide-text__more">
+						<img src="../../common/images/more-with-bg.png" />
+					</span>
+					<span class="slide-text__title">
+						<img src="./images/main-slide-title.png" alt="ALL NEW WRANGLER" />
+					</span>
+					<p class="slide-text__sub">All New Wrangler Rubicon는<br>편리한 스위치 작동으로 오프로드에<br>최적화된 4륜구동을 구현하고 한계를<br>뛰어넘는 경험을 제공합니다.</p>
+				</div>
+				<div class="slide-img">
+					<img src="./images/01-rubicon.png" alt="RUBICON" />
+				</div>
+				<div class="slide-num">
+					<span class="slide-num__current">01</span>
+					<span class="slide-num__slash">/</span>
+					<span class="slide-num__all">04</span>
+				</div>
+				<div class="slide-dir">
+					<div class="slide-dir__btn left">
+						<img src="../../common/images/arrow-icon.png" alt="left-arrow" />
+					</div>
+					<span class="slide-dir__line"></span>
+					<div class="slide-dir__btn right">
+						<img src="../../common/images/arrow-icon.png" alt="left-arrow" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="reservation">
+			<div class="reservation-tab model">
+				<p class="reservation-tab__title">관심모델</p>
+				<div class="reservation-tab__opt"></div>
+			</div>
+			<div class="reservation-tab date">
+				<p class="reservation-tab__title">원하는 날짜</p>
+				<div class="reservation-tab__opt"></div>
+			</div>
+			<div class="reservation-tab place">
+				<p class="reservation-tab__title">원하는 장소</p>
+				<div class="reservation-tab__opt"></div>
+			</div>
+			<div class="reservation-btn">
+				<div class="reservation-btn__text">
+					<span class="text__handle-icon">
+						<img src="../../common/images/handle-icon.png" alt="test-drive" />
+					</span>
+					<p class="text__apply">빠른 시승 신청</p>
+				</div>
+			</div>
+		</section>
+	</div>
 	<footer class="footer">
 	</footer>
 	<script type="text/javascript" src="../../common/javascripts/common.js"></script>

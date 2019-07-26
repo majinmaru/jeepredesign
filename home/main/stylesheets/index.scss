@@ -4,8 +4,237 @@
 @import '../../../common/stylesheets/base/variable.scss';
 @import '../../../common/stylesheets/base/keyframes.scss';
 html {
-	//font-size: $desktop;
+	font-size: $desktop;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
+}
+.megamenu {
+	display: none;
+}
+.container {
+	width: 100%;
+	overflow-x: hidden;
+	position: relative;
+	margin-top: -8.25rem;
+	.main {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+		@include flexbox();
+		.main-left {
+			width: 26%;
+			height: 100%;
+			position: relative;
+			background-color: $white;
+			display: inline-block;
+		}
+		.main-right {
+			width: 74%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			.right-bg {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				.bg-slide {
+					width: 100%;
+					height: 100%;
+					overflow: hidden;
+					img {
+						height: 100%;
+						position: relative;
+						float: right;
+					}
+				}
+			}
+		}
+		.main-slide {
+			width: 78%;
+			height: 70%;
+			position: absolute;
+			margin-left: 11%;
+			z-index: 3;
+			top: 14rem;
+			left: 0;
+			.slide-text {
+				width: 33%;
+				position: relative;
+				display: inline-block;
+				.slide-text__more {
+					width: 10%;
+					position: relative;
+					display: inline-block;
+					img {
+						width: 100%;
+						position: relative;
+						cursor: pointer;
+					}
+				}
+				.slide-text__title {
+					width: 100%;
+					position: relative;
+					margin-top: 2rem;
+					margin-bottom: 3rem;
+					display: inline-block;
+					img {
+						width: 100%;
+						position: relative;
+						display: inline-block;
+					}
+				}
+				.slide-text__sub {
+					font-family: 'Noto Sans KR';
+					color: $gray2;
+					font-size: 1rem;
+					line-height: 1.875;
+				}
+			}
+			.slide-img {
+				position: absolute;
+				width: 97%;
+				z-index: 2;
+				top: 3%;
+				left: -3%;
+				img {
+					position: relative;
+					width: 100%;
+				}
+			}
+			.slide-num {
+				display: inline-block;
+				width: 9%;
+				float: right;
+				clear: both;
+				color: $white;
+				position: relative;
+				@include flexbox();
+				.slide-num__current {
+					font-family: 'Century Gothic';
+					font-weight: bold;
+					font-size: 3.75rem;
+				}
+				.slide-num__slash {
+					font-family: 'Century Gothic';
+					font-size: 1.875rem;
+					margin-left: 0.7rem;
+					margin-right: 1rem;
+					margin-top: 1.875rem;
+				}
+				.slide-num__all{
+					font-family: 'Century Gothic';
+					font-size: 1.875rem;
+					margin-top: 1.875rem;
+				}
+			}
+			.slide-dir {
+				width: 3%;
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				float: right;
+				clear: both;
+				.slide-dir__btn {
+					cursor: pointer;
+					width: 100%;
+					position: relative;
+					img {
+						width: 100%;
+					}
+					&.right {
+						img {
+							@include transform(rotateY(180deg));
+						}
+					}
+				}
+				.slide-dir__line {
+					width: 100%;
+					height: 2px;
+					background-color: $yellow;
+					margin-top: 1.5rem;
+					margin-bottom: 1.5rem;
+					display: block;
+				}
+			}
+		}
+	}
+	.reservation {
+		width: 100%;
+		height: 11.875rem;
+		@include flexbox();
+		@include align-items(center);
+		padding: 0 10% 0 10%;
+		background-color: $black;
+		position: relative;
+		overflow: hidden;
+		@include box-sizing(border-box);
+		.reservation-tab {
+			height: 50%;
+			display: inline-block;
+			position: relative;
+			&.model {
+				width: 20%;
+			}
+			&.date {
+				width: 22%;
+			}
+			&.place {
+				width: 26%;
+			}
+			.reservation-tab__title {
+				font-family: 'Noto Sans KR';
+				color: $yellow;
+				font-size: 1rem;
+			}
+			.reservation-tab__opt {
+				width: 90%;
+				height: 3.75rem;
+				border: 1px solid $gray3;
+				border-radius: 2px;
+				margin-top: 0.7rem;
+			}
+		}
+		.reservation-btn {
+			width: 28%;
+			height: 50%;
+			margin-left: 4%;
+			background-color: $yellow;
+			display: inline-block;
+			position: relative;
+			@include flexbox();
+			@include align-items(center);
+			cursor: pointer;
+			border-radius: 2px;
+			.reservation-btn__text {
+				width: 100%;
+				height: 1.6785rem;
+				position: relative;
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(center);
+				.text__handle-icon {
+					height: 100%;
+					position: relative;
+					display: inline-block;
+					img {
+						height: 100%;
+						position: relative;
+						display: inline-block;
+					}
+				}
+				.text__apply {
+					width: 10rem;
+					font-family: 'Noto Sans KR';
+					color: $black;
+					font-size: 1.5rem;
+					margin-left: 1rem;
+					display: inline-block;
+				}
+			}
+		}
+	}
 }

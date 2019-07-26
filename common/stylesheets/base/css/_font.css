@@ -1,3 +1,5 @@
-
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500&display=swap");
+@font-face { font-family: 'Century Gothic'; src: url("../../../font/CenturyGothic.eot"); src: url("../../../font/CenturyGothic.eot?#iefix") format("embedded-opentype"), url("../../../font/CenturyGothic.woff2") format("woff2"), url("../../../font/CenturyGothic.woff") format("woff"), url("../../../font/CenturyGothic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Century Gothic'; src: url("../../../font/CenturyGothic-Bold.eot"); src: url("../../../font/CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../../../font/CenturyGothic-Bold.woff2") format("woff2"), url("../../../font/CenturyGothic-Bold.woff") format("woff"), url("../../../font/CenturyGothic-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
 
 /*# sourceMappingURL=_font.css.map */
