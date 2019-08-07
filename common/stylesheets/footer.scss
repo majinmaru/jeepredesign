@@ -3,3 +3,11 @@
 @import 'base/mixin.scss';
 @import 'base/variable.scss';
 @import 'base/keyframes.scss';
+.footer {
+	width: 100%;
+	position: relative;
+	img {
+		width: 100%;
+		position: relative;
+	}
+}
