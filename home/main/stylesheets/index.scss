@@ -147,18 +147,18 @@ html {
 					cursor: pointer;
 					width: 100%;
 					position: relative;
-					@include transition(all 0.3s ease);
+					@include transition(opacity 0.3s ease);
 					img {
 						width: 100%;
 					}
 					&.left {
 						&:hover {
-							@include transform(translateX(-20px));
+							opacity: 0.7;
 						}
 					}
 					&.right {
 						&:hover {
-							@include transform(translateX(20px));
+							opacity: 0.7;
 						}
 						img {
 							@include transform(rotateY(180deg));
@@ -349,6 +349,17 @@ html {
 					@include align-items(center);
 					margin-bottom: 2rem;
 					&.current {
+						.left-tab__btn {
+							opacity: 1;
+						}
+						.left-tab__model {
+							opacity: 1;
+						}
+					}
+					&.hover {
+						.left-tab__btn {
+							opacity: 1;
+						}
 						.left-tab__model {
 							opacity: 1;
 						}
@@ -375,6 +386,7 @@ html {
 						height: 2.375rem;
 						opacity: 0;
 						display: inline-block;
+						@include transition(opacity 0.3s ease);
 						img {
 							position: relative;
 							height: 100%;
@@ -607,17 +619,17 @@ html {
 				width: 100%;
 				height: auto;
 				cursor: pointer;
-				@include transition(all 0.3s ease);
+				@include transition(opacity 0.3s ease);
 				&.left {
 					&:hover {
-						@include transform(translateX(-20px));
+						opacity: 0.7;
 					}
 				}
 				&.right {
 					margin-top: 3rem;
 					@include transform(rotateY(180deg));
 					&:hover {
-						@include transform(rotateY(180deg) translateX(-20px));
+						opacity: 0.7;
 					}
 				}
 			}
@@ -687,6 +699,10 @@ html {
 					position: relative;
 					cursor: pointer;
 					display: inline-block;
+					@include transition(opacity 0.3s ease);
+					&:hover {
+						opacity: 0.7;
+					}
 					img {
 						width: 100%;
 					}
