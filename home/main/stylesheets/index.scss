@@ -14,6 +14,7 @@ html {
 	overflow-x: hidden;
 	position: relative;
 	margin-top: -8.25rem;
+	z-index: 1;
 	.main {
 		width: 100%;
 		height: 100vh;
@@ -229,11 +230,15 @@ html {
 						line-height: 1;
 						width: calc(100% - 1.5rem);
 						height: 100%;
+						position: relative;
+						float: left;
 					}
 					.opt-content__drop {
 						position: relative;
 						width: 1.5rem;
 						height: 100%;
+						display: inline-block;
+						float: right;
 						&:hover {
 							opacity: 0.7;
 							@include transition(all 0.3s ease);
@@ -354,6 +359,7 @@ html {
 						height: 1.5rem;
 						cursor: pointer;
 						opacity: 0.5;
+						display: inline-block;
 						@include transition(all 0.3s ease);
 						&:hover {
 							opacity: 1;
@@ -368,6 +374,7 @@ html {
 						margin-left: 1rem;
 						height: 2.375rem;
 						opacity: 0;
+						display: inline-block;
 						img {
 							position: relative;
 							height: 100%;
@@ -450,6 +457,7 @@ html {
 							width: 2.25rem;
 							height: 2.25rem;
 							@include transition(all 0.3s ease);
+							display: inline-block;
 							img {
 								position: relative;
 								width: 100%;
@@ -560,6 +568,7 @@ html {
 						position: relative;
 						width: 2.25rem;
 						height: 2.25rem;
+						display: inline-block;
 						@include transition(all 0.3s ease);
 						img {
 							position: relative;
@@ -677,6 +686,7 @@ html {
 					height: auto;
 					position: relative;
 					cursor: pointer;
+					display: inline-block;
 					img {
 						width: 100%;
 					}
@@ -693,117 +703,125 @@ html {
 		.content-third__right {
 			display: inline-block;
 			width: 56%;
+			height: 30rem;
 			margin-top: 4rem;
-			overflow-x: scroll;
+			overflow: hidden;
 			position: relative;
-			.third-right__category-wrapper {
+			.third-right__category-container {
+				width: 100%;
+				height: 100%;
+				overflow-x: scroll;
 				position: relative;
-				width: 92.5rem;
-				height: 30rem;
-				.third-right__category {
+				.third-right__category-wrapper {
 					position: relative;
-					width: 17rem;
-					height: 29.75rem;
-					margin-right: 1.5rem;
-					display: inline-block;
-					float: left;
-					&:hover {
+					width: 92.5rem;
+					height: 30rem;
+					.third-right__category {
+						position: relative;
+						width: 17rem;
+						height: 29.75rem;
+						margin-right: 1.5rem;
+						display: inline-block;
+						float: left;
+						&:hover {
+							.category-bg {
+								&:after {
+									opacity: 0.5;
+								}
+								img {
+									opacity: 1;
+									@include transform(translateX(-50px));
+								}
+							}
+							.category-text {
+								.category-text__title {
+									color: $white;
+								}
+								.category-text__line {
+									background-color: $white;
+								}
+								.category-text__more {
+									.category-text__more-icon {
+										img {
+											@include transform(rotate(90deg));
+										}
+									}
+									.category-text__more-text {
+										color: $white;
+									}
+								}
+							}
+						}
 						.category-bg {
+							position: relative;
+							width: 100%;
+							height: 100%;
+							overflow: hidden;
 							&:after {
-								opacity: 0.5;
+								content: "";
+								width: 100%;
+								height: 100%;
+								background-color: #202020;
+								opacity: 0;
 							}
 							img {
-								opacity: 1;
-								@include transform(translateX(-50px));
+								opacity: 0;
+								height: 100%;
+								position: absolute;
+								top: 0;
+								left: -30%;
+								@include transition(opacity 0.3s ease);
+								@include transition(transform 3s ease);
 							}
 						}
 						.category-text {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							padding: 2.4rem 2.4rem 5.875rem 2.4rem;
+							width: 100%;
+							@include box-sizing(border-box);
 							.category-text__title {
-								color: $white;
+								font-family: 'Century Gothic';
+								font-weight: bold;
+								font-size: 1.75rem;
+								line-height: 1.35;
+								margin-bottom: 2rem;
+								@include transition(all 0.3s ease);
 							}
 							.category-text__line {
-								background-color: $white;
+								width: 100%;
+								height: 1px;
+								background-color: $gray1;
+								@include transition(all 0.3s ease);
+								margin-bottom: 1.3rem;
 							}
 							.category-text__more {
+								width: 100%;
+								height: 2.25rem;
+								position: relative;
+								@include flexbox();
+								@include align-items(center);
+								cursor: pointer;						
 								.category-text__more-icon {
+									width: 2.25rem;
+									height: 100%;
+									display: inline-block;
+									position: relative;
 									img {
-										@include transform(rotate(90deg));
+										width: 100%;
+										position: relative;
+										@include transition(all 0.3s ease);
 									}
 								}
 								.category-text__more-text {
-									color: $white;
-								}
-							}
-						}
-					}
-					.category-bg {
-						position: relative;
-						width: 100%;
-						height: 100%;
-						overflow: hidden;
-						&:after {
-							content: "";
-							width: 100%;
-							height: 100%;
-							background-color: #202020;
-							opacity: 0;
-						}
-						img {
-							opacity: 0;
-							height: 100%;
-							position: absolute;
-							top: 0;
-							left: -30%;
-							@include transition(opacity 0.3s ease);
-							@include transition(transform 3s ease);
-						}
-					}
-					.category-text {
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						padding: 2.4rem 2.4rem 5.875rem 2.4rem;
-						width: 100%;
-						@include box-sizing(border-box);
-						.category-text__title {
-							font-family: 'Century Gothic';
-							font-weight: bold;
-							font-size: 1.75rem;
-							line-height: 1.35;
-							margin-bottom: 2rem;
-							@include transition(all 0.3s ease);
-						}
-						.category-text__line {
-							width: 100%;
-							height: 1px;
-							background-color: $gray1;
-							@include transition(all 0.3s ease);
-							margin-bottom: 1.3rem;
-						}
-						.category-text__more {
-							width: 100%;
-							height: 2.25rem;
-							position: relative;
-							@include flexbox();
-							@include align-items(center);
-							cursor: pointer;						
-							.category-text__more-icon {
-								width: 2.25rem;
-								height: 100%;
-								position: relative;
-								img {
-									width: 100%;
-									position: relative;
+									font-family: 'Noto Sans KR';
+									font-size: 1.125rem;
+									color: $gray1;
+									line-height: 1;
+									margin-left: 1rem;
 									@include transition(all 0.3s ease);
 								}
-							}
-							.category-text__more-text {
-								font-family: 'Noto Sans KR';
-								font-size: 1.125rem;
-								color: $gray1;
-								line-height: 1;
-								margin-left: 1rem;
-								@include transition(all 0.3s ease);
 							}
 						}
 					}

@@ -17,15 +17,18 @@
 	<link rel="stylesheet" type="text/css" href="./stylesheets/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="../../common/stylesheets/css/footer.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../../lib/javascripts/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../../lib/javascripts/jquery.nicescroll.js"></script>
 </head>
 <body>
 	<header id="header" class="header">
 		<div class="header-logo">
-			<a href="#" class="logo-jeep">
-				<img src="../../common/images/Jeep-logo.png" alt="LOGO" />
+			<a href="https://majinmaru.github.io/jeepredesign/home/main/index.html" class="logo-jeep">
+				<img class="logo-jeep__black" src="../../common/images/Jeep-logo.png" alt="LOGO" />
+				<img class="logo-jeep__white" src="../../common/images/Jeep-logo-white.png" alt="LOGO" />
 			</a>
 		</div>
-		<a href="#" class="header-showroom">
+		<a href="https://majinmaru.github.io/jeepredesign/home/jeepshowroom/index.html" class="header-showroom">
 			<span class="showroom-quick">
 				<img src="../../common/images/location-icon.png" alt="LOCATION">
 				<span>전시장</span>
@@ -53,6 +56,19 @@
 			<div class="megamenu-bg__block"></div>
 		</div>
 		<div class="megamenu-menu">
+			<div class="megamenu-header">
+				<div class="megamenu-header__logo">
+					<a href="https://majinmaru.github.io/jeepredesign/home/main/index.html" class="megamenu-header__logo-tab">
+						<img class="megamenu-header__logo-img" src="../../common/images/Jeep-logo.png" alt="LOGO" />
+					</a>
+				</div>
+				<div class="megamenu-header__close">
+					<span class="megamenu-header__close-icon">
+						<span class="close-line"></span>
+						<span class="close-line"></span>
+					</span>
+				</div>
+			</div>
 			<div class="megamenu-search">
 				<input type="text" name="search" placeholder="FIND YOUR JEEP..." />
 				<span>
@@ -70,10 +86,10 @@
 							<p class="category-tab__title">그랜드 체로키</p>
 							<p class="category-tab__subtitle">GRAND CHEROKEE</p>
 						</li>
-						<li class="category-tab">
+						<a href="https://majinmaru.github.io/jeepredesign/home/jeepvehicles/index.html" class="category-tab">
 							<p class="category-tab__title">랭글러</p>
 							<p class="category-tab__subtitle">WRANGLER</p>
-						</li>
+						</a>
 						<li class="category-tab">
 							<p class="category-tab__title">체로키</p>
 							<p class="category-tab__subtitle">CHEROKEE</p>
@@ -94,9 +110,9 @@
 						<p class="title-text">구입문의</p>
 					</div>
 					<ul class="megamenu-category__tab-wrapper">
-						<li class="category-tab">
+						<a href="https://majinmaru.github.io/jeepredesign/home/jeepshowroom/index.html"  class="category-tab">
 							<p class="category-tab__title">전시장 찾기</p>
-						</li>
+						</a>
 						<li class="category-tab">
 							<p class="category-tab__title">시승신청</p>
 						</li>
@@ -111,9 +127,9 @@
 						<p class="title-text">ABOUT JEEP</p>
 					</div>
 					<ul class="megamenu-category__tab-wrapper">
-						<li class="category-tab">
+						<a href="https://majinmaru.github.io/jeepredesign/home/jeepstory/index.html" class="category-tab">
 							<p class="category-tab__title">JEEP 스토리</p>
-						</li>
+						</a>
 						<li class="category-tab">
 							<p class="category-tab__title">JEEP 시스템</p>
 						</li>
@@ -148,6 +164,9 @@
 						</li>
 					</ul>
 				</div>
+			</div>
+			<div class="megamenu-sns">
+				<img src="../../common/images/sns.png" />
 			</div>
 		</div>		
 	</div>
@@ -363,79 +382,81 @@
 				</div>
 			</div>
 			<div class="content-third__right">
-				<div class="third-right__category-wrapper">
-					<div class="third-right__category">
-						<div class="category-bg">
-							<img src="./images/promotion-grand-cherokee.png" />
-						</div>
-						<div class="category-text">
-							<div class="category-text__title">GRAND<br>CHEROKEE</div>
-							<div class="category-text__line"></div>
-							<div class="category-text__more">
-								<span class="category-text__more-icon">
-									<img src="../../common/images/plus-icon-yellow.png" />
-								</span>
-								<span class="category-text__more-text">MORE</span>
+				<div class="third-right__category-container">
+					<div class="third-right__category-wrapper">
+						<div class="third-right__category">
+							<div class="category-bg">
+								<img src="./images/promotion-grand-cherokee.png" />
+							</div>
+							<div class="category-text">
+								<div class="category-text__title">GRAND<br>CHEROKEE</div>
+								<div class="category-text__line"></div>
+								<div class="category-text__more">
+									<span class="category-text__more-icon">
+										<img src="../../common/images/plus-icon-yellow.png" />
+									</span>
+									<span class="category-text__more-text">MORE</span>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="third-right__category">
-						<div class="category-bg">
-							<img src="./images/promotion-wrangler.png" />
-						</div>
-						<div class="category-text">
-							<div class="category-text__title">WRANGLER</div>
-							<div class="category-text__line"></div>
-							<div class="category-text__more">
-								<span class="category-text__more-icon">
-									<img src="../../common/images/plus-icon-yellow.png" />
-								</span>
-								<span class="category-text__more-text">MORE</span>
+						<div class="third-right__category">
+							<div class="category-bg">
+								<img src="./images/promotion-wrangler.png" />
+							</div>
+							<div class="category-text">
+								<div class="category-text__title">WRANGLER</div>
+								<div class="category-text__line"></div>
+								<div class="category-text__more">
+									<span class="category-text__more-icon">
+										<img src="../../common/images/plus-icon-yellow.png" />
+									</span>
+									<span class="category-text__more-text">MORE</span>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="third-right__category">
-						<div class="category-bg">
-							<img src="./images/promotion-cherokee.png" />
-						</div>
-						<div class="category-text">
-							<div class="category-text__title">CHEROKEE</div>
-							<div class="category-text__line"></div>
-							<div class="category-text__more">
-								<span class="category-text__more-icon">
-									<img src="../../common/images/plus-icon-yellow.png" />
-								</span>
-								<span class="category-text__more-text">MORE</span>
+						<div class="third-right__category">
+							<div class="category-bg">
+								<img src="./images/promotion-cherokee.png" />
+							</div>
+							<div class="category-text">
+								<div class="category-text__title">CHEROKEE</div>
+								<div class="category-text__line"></div>
+								<div class="category-text__more">
+									<span class="category-text__more-icon">
+										<img src="../../common/images/plus-icon-yellow.png" />
+									</span>
+									<span class="category-text__more-text">MORE</span>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="third-right__category">
-						<div class="category-bg">
-							<img src="./images/promotion-compass.png" />
-						</div>
-						<div class="category-text">
-							<div class="category-text__title">COMPASS</div>
-							<div class="category-text__line"></div>
-							<div class="category-text__more">
-								<span class="category-text__more-icon">
-									<img src="../../common/images/plus-icon-yellow.png" />
-								</span>
-								<span class="category-text__more-text">MORE</span>
+						<div class="third-right__category">
+							<div class="category-bg">
+								<img src="./images/promotion-compass.png" />
+							</div>
+							<div class="category-text">
+								<div class="category-text__title">COMPASS</div>
+								<div class="category-text__line"></div>
+								<div class="category-text__more">
+									<span class="category-text__more-icon">
+										<img src="../../common/images/plus-icon-yellow.png" />
+									</span>
+									<span class="category-text__more-text">MORE</span>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="third-right__category">
-						<div class="category-bg">
-							<img src="./images/promotion-renegade.png" />
-						</div>
-						<div class="category-text">
-							<div class="category-text__title">RENEGADE</div>
-							<div class="category-text__line"></div>
-							<div class="category-text__more">
-								<span class="category-text__more-icon">
-									<img src="../../common/images/plus-icon-yellow.png" />
-								</span>
-								<span class="category-text__more-text">MORE</span>
+						<div class="third-right__category">
+							<div class="category-bg">
+								<img src="./images/promotion-renegade.png" />
+							</div>
+							<div class="category-text">
+								<div class="category-text__title">RENEGADE</div>
+								<div class="category-text__line"></div>
+								<div class="category-text__more">
+									<span class="category-text__more-icon">
+										<img src="../../common/images/plus-icon-yellow.png" />
+									</span>
+									<span class="category-text__more-text">MORE</span>
+								</div>
 							</div>
 						</div>
 					</div>
