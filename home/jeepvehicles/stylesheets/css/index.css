@@ -37,9 +37,90 @@
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
 .container { width: 100%; overflow-x: hidden; position: relative; margin-top: -8.25rem; z-index: 1; }
-.container .banner { width: 100%; position: relative; }
+.container .banner { width: 100%; height: 62.25rem; position: relative; }
 .container .banner .banner-bg { width: 100%; position: relative; }
 .container .banner .banner-bg img { width: 100%; }
+.container .banner .banner-text { position: absolute; top: 38%; width: 100%; z-index: 2; text-align: center; }
+.container .banner .banner-text .banner-text__location { width: 100%; height: 1.75rem; display: inline-block; position: relative; }
+.container .banner .banner-text .banner-text__location img { height: 100%; display: inline-block; position: absolute; top: 0; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+.container .banner .banner-text .banner-text__title { font-family: 'Century Gothic'; font-weight: bold; font-size: 5rem; line-height: 1.25; color: #fff; letter-spacing: 2px; margin-top: 1rem; display: inline-block; position: relative; }
+.container .banner .banner-text .banner-text__title:after { content: ''; width: 100%; height: 2px; background-color: #fff; display: inline-block; position: absolute; bottom: 0; left: 0; }
+.container .banner .banner-text .banner-text__sub { font-family: 'Noto Sans KR'; font-weight: normal; line-height: 1; color: #fff; font-size: 1.5rem; margin-top: 0.75rem; }
+.container .content-first { position: relative; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.container .content-first .content-first__left { width: 23.6%; display: inline-block; position: relative; background-color: #fff; }
+.container .content-first .content-first__left img { width: 100%; padding-left: 44%; padding-top: 28%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.container .content-first .content-first__right { width: 76.4%; display: inline-block; position: relative; background-color: #fff; margin-top: -9.375rem; }
+.container .content-first .content-first__right .right-title { width: 100%; position: relative; padding-left: 9%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.container .content-first .content-first__right .right-title .right-title__indicator { width: 3rem; position: relative; margin-top: -1.5rem; }
+.container .content-first .content-first__right .right-title .right-title__indicator img { position: relative; width: 100%; }
+.container .content-first .content-first__right .right-title .right-title__sub { margin-top: 0.75rem; font-family: 'Century Gothic'; font-size: 1.25rem; color: #3e3e3e; }
+.container .content-first .content-first__right .right-title .right-title__text { width: 15.25rem; position: relative; margin-top: 1.25rem; }
+.container .content-first .content-first__right .right-title .right-title__text img { position: relative; width: 100%; }
+.container .content-first .content-first__right .right-content { position: relative; width: 100%; padding-right: 16.7%; padding-left: 5%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.container .content-first .content-first__right .right-content .right-content__img { position: relative; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.container .content-first .content-first__right .right-content .right-content__img img { position: relative; width: 100%; }
+.container .content-first .content-first__right .right-content .right-content__opt { position: relative; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 10%; margin-top: 3rem; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-door { position: relative; width: 19.5rem; display: inline-block; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-door .opt-door__indicator { width: 4.625rem; height: 4px; background-color: #ffb609; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-door p { font-family: 'Century Gothic'; color: #3e3e3e; font-size: 1.25rem; margin-top: 1rem; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-door .opt-door__img { margin-top: 2rem; width: 100%; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-door .opt-door__img img { width: 100%; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-color { position: relative; width: 32.375rem; display: inline-block; margin-left: 10%; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-color .opt-color__indicator { width: 4.625rem; height: 4px; background-color: #ffb609; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-color p { font-family: 'Century Gothic'; color: #3e3e3e; font-size: 1.25rem; margin-top: 1rem; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-color .opt-color__img { margin-top: 2rem; width: 100%; }
+.container .content-first .content-first__right .right-content .right-content__opt .opt-color .opt-color__img img { width: 100%; }
+.container .content-second { position: relative; width: 100%; margin-top: 7rem; }
+.container .content-second .content-second__title { position: relative; width: 63%; }
+.container .content-second .content-second__title .second-title__bg { position: relative; width: 100%; height: 35.625rem; background-color: #181818; }
+.container .content-second .content-second__title .second-title__content { position: absolute; width: 100%; height: 35.625rem; top: 0; left: 0; }
+.container .content-second .content-second__title .second-title__content .second-title__indicator { position: relative; width: 3rem; position: relative; margin-top: -1.5rem; margin-left: 17%; }
+.container .content-second .content-second__title .second-title__content .second-title__indicator img { position: relative; width: 100%; }
+.container .content-second .content-second__title .second-title__content .second-title__text { font-family: 'Century Gothic'; font-size: 3.375rem; font-weight: bold; color: #fff; margin-top: 1.5rem; margin-left: 17%; width: 100%; }
+.container .content-second .content-second__title .second-title__content .second-title__p { font-family: 'Noto Sans KR'; font-size: 1rem; color: #fff; line-height: 1.875; margin-top: 2.5rem; margin-left: 17%; word-wrap: break-word; word-break: keep-all; width: 40%; }
+.container .content-second .content-second__exterior { position: relative; width: 100%; margin-top: -13%; }
+.container .content-second .content-second__exterior .exterior-wrangler { width: 63%; margin-left: 18.5%; position: relative; }
+.container .content-second .content-second__exterior .exterior-wrangler img { width: 100%; position: relative; }
+.container .content-second .content-second__exterior .exterior-more { width: 63%; margin-left: 18.5%; position: absolute; top: 0; left: 0; }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper { position: relative; width: 16.5rem; height: 3.4375rem; overflow: hidden; margin-left: 45%; margin-top: 7%; }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper .more-btn { width: 3.4375rem; height: 3.4375rem; display: inline-block; background-image: url("../../../../common/images/pointer.png"); background-repeat: no-repeat; background-size: 100%; z-index: 3; cursor: pointer; border-radius: 20%; overflow: visible; }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper .more-btn:hover img { -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper .more-btn img { position: relative; width: 60%; height: 60%; margin-top: 20%; margin-left: 20%; -webkit-transition: transform 0.3s ease; -o-transition: transform 0.3s ease; transition: transform 0.3s ease; }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper .more-btn img.rotate { -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper .more-title { width: 100%; height: 100%; display: inline-block; background-image: url("../../../../common/images/more-bg.png"); background-repeat: no-repeat; background-size: 100%; position: absolute; top: 0; left: -16.5rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; overflow: hidden; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; opacity: 0; }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper .more-title .more-title__text { font-family: 'Noto Sans KR'; font-weight: 500; font-size: 1.125rem; line-height: 1.12; color: #3e3e3e; display: inline-block; width: 76%; margin-left: 24%; cursor: pointer; }
+.container .content-second .content-second__exterior .exterior-more .exterior-more-wrapper .more-title .more-title__text:hover { text-decoration: underline; }
+.container .content-second .content-second__exterior .exterior-popup { display: none; width: 100vw; height: 100vh; background-color: rgba(40, 40, 40, 0.7); position: fixed; top: 0; left: 0; z-index: 10; }
+.container .content-second .content-second__exterior .exterior-popup .popup-content { position: relative; display: inline-block; width: 78%; margin-left: 11%; margin-top: 11%; }
+.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__img { position: relative; width: 100%; display: inline-block; }
+.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__close { position: absolute; top: 0; right: 0; width: 2.25rem; height: 2.25rem; display: inline-block; }
+.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__close img { width: 100%; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.container .content-third { position: relative; width: 100%; margin-top: 7rem; }
+.container .content-third .content-third__title { position: relative; width: 100%; }
+.container .content-third .content-third__title .third-title__indicator { width: 3rem; margin-left: calc((100% - 3rem) / 2); }
+.container .content-third .content-third__title .third-title__indicator img { position: relative; width: 100%; }
+.container .content-third .content-third__title .third-title__text { font-family: 'Century Gothic'; color: #111111; width: 100%; text-align: center; font-size: 3.375rem; font-weight: bold; margin-top: 1.5rem; }
+.container .content-third .content-third__title .third-title__p { width: 32%; text-align: center; font-family: 'Noto Sans KR'; font-size: 1rem; color: #111111; line-height: 1.875; margin-top: 2.5rem; word-wrap: break-word; word-break: keep-all; margin-left: 34%; }
+.container .content-third .content-third__interior { position: relative; margin-top: 5rem; width: 100%; height: 39%; overflow: hidden; }
+.container .content-third .content-third__interior:after { content: ''; display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #fff; opacity: 0.5; }
+.container .content-third .content-third__interior .interior-img { position: relative; width: 100%; }
+.container .content-third .content-third__interior .interior-btn { position: absolute; top: 50%; left: 50%; width: 28rem; height: auto; z-index: 3; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); cursor: pointer; -webkit-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }
+.container .content-third .content-third__interior .interior-btn:hover { opacity: 0.8; }
+.container .content-fourth { position: relative; width: 100%; margin-top: 9rem; background-image: url("../../images/skidmark.png"); background-repeat: no-repeat; background-position: left top; background-size: 26%; }
+.container .content-fourth .content-fourth__title { position: relative; width: 63%; margin-left: 37%; }
+.container .content-fourth .content-fourth__title .fourth-title__bg { position: relative; width: 100%; height: 44rem; overflow: hidden; }
+.container .content-fourth .content-fourth__title .fourth-title__bg img { position: relative; width: 100%; }
+.container .content-fourth .content-fourth__title .fourth-title__content { position: absolute; width: 100%; height: 44rem; top: 0; left: 0; }
+.container .content-fourth .content-fourth__title .fourth-title__content .fourth-title__indicator { position: relative; width: 3rem; position: relative; margin-top: -1.5rem; margin-left: 10%; }
+.container .content-fourth .content-fourth__title .fourth-title__content .fourth-title__indicator img { position: relative; width: 100%; }
+.container .content-fourth .content-fourth__title .fourth-title__content .fourth-title__text { font-family: 'Century Gothic'; font-size: 3.375rem; line-height: 1.12; font-weight: bold; color: #111111; margin-top: 1.5rem; margin-left: 10%; width: 100%; }
+.container .content-fourth .content-fourth__title .fourth-title__content .fourth-title__p { font-family: 'Noto Sans KR'; font-size: 1rem; color: #111111; line-height: 1.875; margin-top: 2.5rem; margin-left: 10%; word-wrap: break-word; word-break: keep-all; width: 54%; }
+.container .content-fourth .content-fourth__feature { position: relative; width: 77%; margin-left: 11.5%; margin-top: -14%; }
+.container .content-fourth .content-fourth__feature img { position: relative; width: 100%; }
+.container .content-fifth { width: 100%; position: relative; margin-top: 7rem; }
+.container .content-fifth img { position: relative; width: 100%; }
+.container .content-sixth { width: 100%; position: relative; }
+.container .content-sixth img { position: relative; width: 100%; }
 
 @media screen and (min-width: 768px) and (max-width: 1600px) { html { font-size: 14px; } }
 

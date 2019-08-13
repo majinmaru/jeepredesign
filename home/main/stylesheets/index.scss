@@ -42,10 +42,16 @@ html {
 					width: 100%;
 					height: 100%;
 					overflow: hidden;
-					img {
+					.bg-slide__img {
 						height: 100%;
 						position: relative;
 						float: right;
+						display: none;
+						opacity: 0;
+						&.current {
+							@include animation(to-right 0.3s ease);
+							opacity: 1;
+						}
 					}
 				}
 			}
@@ -92,10 +98,21 @@ html {
 					}
 				}
 				.slide-text__sub {
-					font-family: 'Noto Sans KR';
-					color: $gray2;
-					font-size: 1rem;
-					line-height: 1.875;
+					width: 100%;
+					display: inline-block;
+					.slide-text__sub-text {
+						width: 100%;
+						font-family: 'Noto Sans KR';
+						color: $gray2;
+						font-size: 1rem;
+						line-height: 1.875;
+						display: none;
+						opacity: 0;
+						&.current {
+							@include animation(to-right 0.3s ease);
+							opacity: 1;
+						}
+					}
 				}
 			}
 			.slide-img {
@@ -104,9 +121,15 @@ html {
 				z-index: 2;
 				top: 3%;
 				left: -3%;
-				img {
+				.slide-img__img {
 					position: relative;
 					width: 100%;
+					display: none;
+					opacity: 0;
+					&.current {
+						@include animation(to-left 0.3s ease);
+						opacity: 1;
+					}
 				}
 			}
 			.slide-num {

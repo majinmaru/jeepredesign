@@ -42,7 +42,8 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot
 .container .main .main-right { width: 74%; height: 100%; position: relative; overflow: hidden; display: inline-block; }
 .container .main .main-right .right-bg { width: 100%; height: 100%; overflow: hidden; }
 .container .main .main-right .right-bg .bg-slide { width: 100%; height: 100%; overflow: hidden; }
-.container .main .main-right .right-bg .bg-slide img { height: 100%; position: relative; float: right; }
+.container .main .main-right .right-bg .bg-slide .bg-slide__img { height: 100%; position: relative; float: right; display: none; opacity: 0; }
+.container .main .main-right .right-bg .bg-slide .bg-slide__img.current { -webkit-animation: to-right 0.3s ease; animation: to-right 0.3s ease; opacity: 1; }
 .container .main .main-slide { width: 78%; height: 70%; position: absolute; margin-left: 11%; z-index: 3; top: 14rem; left: 0; }
 .container .main .main-slide .slide-text { width: 33%; position: relative; display: inline-block; }
 .container .main .main-slide .slide-text .slide-text__more { width: 3.25rem; height: 3.25rem; position: relative; display: block; }
@@ -50,9 +51,12 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot
 .container .main .main-slide .slide-text .slide-text__more img { width: 100%; position: relative; cursor: pointer; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
 .container .main .main-slide .slide-text .slide-text__title { width: 100%; position: relative; margin-top: 2rem; margin-bottom: 3rem; display: inline-block; }
 .container .main .main-slide .slide-text .slide-text__title img { width: 100%; position: relative; display: inline-block; }
-.container .main .main-slide .slide-text .slide-text__sub { font-family: 'Noto Sans KR'; color: #818181; font-size: 1rem; line-height: 1.875; }
+.container .main .main-slide .slide-text .slide-text__sub { width: 100%; display: inline-block; }
+.container .main .main-slide .slide-text .slide-text__sub .slide-text__sub-text { width: 100%; font-family: 'Noto Sans KR'; color: #818181; font-size: 1rem; line-height: 1.875; display: none; opacity: 0; }
+.container .main .main-slide .slide-text .slide-text__sub .slide-text__sub-text.current { -webkit-animation: to-right 0.3s ease; animation: to-right 0.3s ease; opacity: 1; }
 .container .main .main-slide .slide-img { position: absolute; width: 97%; z-index: 2; top: 3%; left: -3%; }
-.container .main .main-slide .slide-img img { position: relative; width: 100%; }
+.container .main .main-slide .slide-img .slide-img__img { position: relative; width: 100%; display: none; opacity: 0; }
+.container .main .main-slide .slide-img .slide-img__img.current { -webkit-animation: to-left 0.3s ease; animation: to-left 0.3s ease; opacity: 1; }
 .container .main .main-slide .slide-num { display: inline-block; width: 9%; float: right; clear: both; color: #fff; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .container .main .main-slide .slide-num .slide-num__current { font-family: 'Century Gothic'; font-weight: bold; font-size: 3.75rem; }
 .container .main .main-slide .slide-num .slide-num__slash { font-family: 'Century Gothic'; font-size: 1.875rem; margin-left: 0.7rem; margin-right: 1rem; margin-top: 1.875rem; }

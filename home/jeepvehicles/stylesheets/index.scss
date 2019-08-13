@@ -17,6 +17,7 @@ html {
 	z-index: 1;
 	.banner {
 		width: 100%;
+		height: 62.25rem;
 		position: relative;
 		.banner-bg {
 			width: 100%;
@@ -24,6 +25,518 @@ html {
 			img {
 				width: 100%;
 			}
+		}
+		.banner-text {
+			position: absolute;
+			top: 38%;
+			width: 100%;
+			z-index: 2;
+			text-align: center;
+			.banner-text__location {
+				width: 100%;
+				height: 1.75rem;
+				display: inline-block;
+				position: relative;
+				img {
+					height: 100%;
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					@include transform(translate(-50%, 0));
+				}
+			}
+			.banner-text__title {
+				font-family: 'Century Gothic';
+				font-weight: bold;
+				font-size: 5rem;
+				line-height: 1.25;
+				color: $white;
+				letter-spacing: 2px;
+				margin-top: 1rem;
+				display: inline-block;
+				position: relative;
+				&:after {
+					content: '';
+					width: 100%;
+					height: 2px;
+					background-color: $white;
+					display: inline-block;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+			.banner-text__sub {
+				font-family: 'Noto Sans KR';
+				font-weight: normal;
+				line-height: 1;
+				color: $white;
+				font-size: 1.5rem;
+				margin-top: 0.75rem;
+			}
+		}
+	}
+	.content-first {
+		position: relative;
+		width: 100%;
+		@include flexbox();
+		.content-first__left {
+			width: 23.6%;
+			display: inline-block;
+			position: relative;
+			background-color: $white;
+			img {
+				width: 100%;
+				padding-left: 44%;
+				padding-top: 28%;
+				@include box-sizing(border-box);
+			}
+		}
+		.content-first__right {
+			width: 76.4%;
+			display: inline-block;
+			position: relative;
+			background-color: $white;
+			margin-top: -9.375rem;
+			.right-title {
+				width: 100%;
+				position: relative;
+				padding-left: 9%;
+				@include box-sizing(border-box);
+				.right-title__indicator {
+					width: 3rem;
+					position: relative;
+					margin-top: -1.5rem;
+					img {
+						position: relative;
+						width: 100%;
+					}
+				}
+				.right-title__sub {
+					margin-top: 0.75rem;
+					font-family: 'Century Gothic';
+					font-size: 1.25rem;
+					color: $gray1;
+				}
+				.right-title__text {
+					width: 15.25rem;
+					position: relative;
+					margin-top: 1.25rem;
+					img {
+						position: relative;
+						width: 100%;
+					}
+				}
+			}
+			.right-content {
+				position: relative;
+				width: 100%;
+				padding-right: 16.7%;
+				padding-left: 5%;
+				@include box-sizing(border-box);
+				.right-content__img {
+					position: relative;
+					width: 100%;
+					@include box-sizing(border-box);
+					img {
+						position: relative;
+						width: 100%;
+					}
+				}
+				.right-content__opt {
+					position: relative;
+					width: 100%;
+					@include box-sizing(border-box);
+					padding-left: 10%;
+					margin-top: 3rem;
+					.opt-door {
+						position: relative;
+						width: 19.5rem;
+						display: inline-block;
+						.opt-door__indicator {
+							width: 4.625rem;
+							height: 4px;
+							background-color: $yellow;
+						}
+						p {
+							font-family: 'Century Gothic';
+							color: $gray1;
+							font-size: 1.25rem;
+							margin-top: 1rem;
+						}
+						.opt-door__img {
+							margin-top: 2rem;
+							width: 100%;
+							img {
+								width: 100%;
+							}
+						}
+					}
+					.opt-color {
+						position: relative;
+						width: 32.375rem;
+						display: inline-block;
+						margin-left: 10%;
+						.opt-color__indicator {
+							width: 4.625rem;
+							height: 4px;
+							background-color: $yellow;
+						}
+						p {
+							font-family: 'Century Gothic';
+							color: $gray1;
+							font-size: 1.25rem;
+							margin-top: 1rem;
+						}
+						.opt-color__img {
+							margin-top: 2rem;
+							width: 100%;
+							img {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.content-second {
+		position: relative;
+		width: 100%;
+		margin-top: 7rem;
+		.content-second__title {
+			position: relative;
+			width: 63%;
+			.second-title__bg {
+				position: relative;
+				width: 100%;
+				height: 35.625rem;
+				background-color: #181818;
+			}
+			.second-title__content {
+				position: absolute;
+				width: 100%;
+				height: 35.625rem;
+				top: 0;
+				left: 0;
+				.second-title__indicator {
+					position: relative;
+					width: 3rem;
+					position: relative;
+					margin-top: -1.5rem;
+					margin-left: 17%;
+					img {
+						position: relative;
+						width: 100%;
+					}
+				}
+				.second-title__text {
+					font-family: 'Century Gothic';
+					font-size: 3.375rem;
+					font-weight: bold;
+					color: $white;
+					margin-top: 1.5rem;
+					margin-left: 17%;
+					width: 100%;
+				}
+				.second-title__p {
+					font-family: 'Noto Sans KR';
+					font-size: 1rem;
+					color: $white;
+					line-height: 1.875;
+					margin-top: 2.5rem;
+					margin-left: 17%;
+					word-wrap: break-word;
+					word-break: keep-all;
+					width: 40%;
+				}
+			}
+		}
+		.content-second__exterior {
+			position: relative;
+			width: 100%;
+			margin-top: -13%;
+			.exterior-wrangler {
+				width: 63%;
+				margin-left: 18.5%;
+				position: relative;
+				img {
+					width: 100%;
+					position: relative;
+				}
+			}
+			.exterior-more {
+				width: 63%;
+				margin-left: 18.5%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				.exterior-more-wrapper {
+					position: relative;
+					width: 16.5rem;
+					height: 3.4375rem;
+					overflow: hidden;
+					margin-left: 45%;
+					margin-top: 7%;
+					.more-btn {
+						width: 3.4375rem;
+						height: 3.4375rem;
+						display: inline-block;
+						background-image: url("../../../../common/images/pointer.png");
+						background-repeat: no-repeat;
+						background-size: 100%;
+						z-index: 3;
+						cursor: pointer;
+						border-radius: 20%;
+						overflow: visible;
+						&:hover{
+							img {
+								@include transform(rotate(45deg));
+							}
+						}
+						img {
+							position: relative;
+							width: 60%;
+							height: 60%;
+							margin-top: 20%;
+							margin-left: 20%;
+							@include transition(transform 0.3s ease);
+							&.rotate {
+								@include transform(rotate(45deg));
+							}
+						}
+					}
+					.more-title {
+						width: 100%;
+						height: 100%;
+						display: inline-block;
+						background-image: url("../../../../common/images/more-bg.png");
+						background-repeat: no-repeat;
+						background-size: 100%;
+						position: absolute;
+						top: 0;
+						left: -16.5rem;
+						@include flexbox();
+						@include align-items(center);
+						overflow: hidden;
+						@include transition(all 0.3s ease);
+						opacity: 0;
+						.more-title__text {
+							font-family: 'Noto Sans KR';
+							font-weight: 500;
+							font-size: 1.125rem;
+							line-height: 1.12;
+							color: $gray1;
+							display: inline-block;
+							width: 76%;
+							margin-left: 24%;
+							cursor: pointer;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}				
+			}
+			.exterior-popup {
+				display: none;
+				width: 100vw;
+				height: 100vh;
+				background-color: rgba(40, 40, 40, 0.7);
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				.popup-content {
+					position: relative;
+					display: inline-block;
+					width: 78%;
+					margin-left: 11%;
+					margin-top: 11%;
+					.popup-content__img {
+						position: relative;
+						width: 100%;
+						display: inline-block;
+					}
+					.popup-content__close {
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 2.25rem;
+						height: 2.25rem;
+						display: inline-block;
+						img {
+							width: 100%;
+							@include transform(rotate(45deg));
+						}
+					}
+				}
+			}
+		}
+	}
+	.content-third {
+		position: relative;
+		width: 100%;
+		margin-top: 7rem;
+		.content-third__title {
+			position: relative;
+			width: 100%;
+			.third-title__indicator {
+				width: 3rem;
+				margin-left: calc((100% - 3rem) / 2);
+				img {
+					position: relative;
+					width: 100%;
+				}
+			}
+			.third-title__text {
+				font-family: 'Century Gothic';
+				color: $black;
+				width: 100%;
+				text-align: center;
+				font-size: 3.375rem;
+				font-weight: bold;
+				margin-top: 1.5rem;
+			}
+			.third-title__p {
+				width: 32%;
+				text-align: center;
+				font-family: 'Noto Sans KR';
+				font-size: 1rem;
+				color: $black;
+				line-height: 1.875;
+				margin-top: 2.5rem;
+				word-wrap: break-word;
+				word-break: keep-all;
+				margin-left: 34%;
+			}
+		}
+		.content-third__interior {
+			position: relative;
+			margin-top: 5rem;
+			width: 100%;
+			height: 39%;
+			overflow: hidden;
+			&:after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: $white;
+				opacity: 0.5;
+			}
+			.interior-img {
+				position: relative;
+				width: 100%;
+			}
+			.interior-btn {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 28rem;
+				height: auto;
+				z-index: 3;
+				@include transform(translate(-50%, -50%));
+				cursor: pointer;
+				@include transition(opacity 0.3s ease);
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+	.content-fourth {
+		position: relative;
+		width: 100%;
+		margin-top: 9rem;
+		background-image: url("../../images/skidmark.png");
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 26%;
+		.content-fourth__title {
+			position: relative;
+			width: 63%;
+			margin-left: 37%;
+			.fourth-title__bg {
+				position: relative;
+				width: 100%;
+				height: 44rem;
+				overflow: hidden;
+				img {
+					position: relative;
+					width: 100%;
+				}
+			}
+			.fourth-title__content {
+				position: absolute;
+				width: 100%;
+				height: 44rem;
+				top: 0;
+				left: 0;
+				.fourth-title__indicator {
+					position: relative;
+					width: 3rem;
+					position: relative;
+					margin-top: -1.5rem;
+					margin-left: 10%;
+					img {
+						position: relative;
+						width: 100%;
+					}
+				}
+				.fourth-title__text {
+					font-family: 'Century Gothic';
+					font-size: 3.375rem;
+					line-height: 1.12;
+					font-weight: bold;
+					color: $black;
+					margin-top: 1.5rem;
+					margin-left: 10%;
+					width: 100%;
+				}
+				.fourth-title__p {
+					font-family: 'Noto Sans KR';
+					font-size: 1rem;
+					color: $black;
+					line-height: 1.875;
+					margin-top: 2.5rem;
+					margin-left: 10%;
+					word-wrap: break-word;
+					word-break: keep-all;
+					width: 54%;
+				}
+			}
+		}
+		.content-fourth__feature {
+			position: relative;
+			width: 77%;
+			margin-left: 11.5%;
+			margin-top: -14%;
+			img {
+				position: relative;
+				width: 100%;
+			}
+		}
+	}
+	.content-fifth {
+		width: 100%;
+		position: relative;
+		margin-top: 7rem;
+		img {
+			position: relative;
+			width: 100%;
+		}
+	}
+	.content-sixth {
+		width: 100%;
+		position: relative;
+		img {
+			position: relative;
+			width: 100%;
 		}
 	}
 }
