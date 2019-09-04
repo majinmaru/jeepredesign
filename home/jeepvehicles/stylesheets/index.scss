@@ -366,9 +366,16 @@ html {
 						width: 2.25rem;
 						height: 2.25rem;
 						display: inline-block;
+						cursor: pointer;
+						&:hover {
+							img {
+								@include transform(rotate(135deg));
+							}
+						}
 						img {
 							width: 100%;
 							@include transform(rotate(45deg));
+							@include transition(transform 0.3s ease);
 						}
 					}
 				}

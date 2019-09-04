@@ -93,8 +93,9 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot
 .container .content-second .content-second__exterior .exterior-popup { display: none; width: 100vw; height: 100vh; background-color: rgba(40, 40, 40, 0.7); position: fixed; top: 0; left: 0; z-index: 10; }
 .container .content-second .content-second__exterior .exterior-popup .popup-content { position: relative; display: inline-block; width: 78%; margin-left: 11%; margin-top: 11%; }
 .container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__img { position: relative; width: 100%; display: inline-block; }
-.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__close { position: absolute; top: 0; right: 0; width: 2.25rem; height: 2.25rem; display: inline-block; }
-.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__close img { width: 100%; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__close { position: absolute; top: 0; right: 0; width: 2.25rem; height: 2.25rem; display: inline-block; cursor: pointer; }
+.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__close:hover img { -webkit-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg); }
+.container .content-second .content-second__exterior .exterior-popup .popup-content .popup-content__close img { width: 100%; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); -webkit-transition: transform 0.3s ease; -o-transition: transform 0.3s ease; transition: transform 0.3s ease; }
 .container .content-third { position: relative; width: 100%; margin-top: 7rem; }
 .container .content-third .content-third__title { position: relative; width: 100%; }
 .container .content-third .content-third__title .third-title__indicator { width: 3rem; margin-left: calc((100% - 3rem) / 2); }
