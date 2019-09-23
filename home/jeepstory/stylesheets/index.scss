@@ -127,6 +127,93 @@ html {
 			}
 		}
 	}
+	.content-second {
+		position: relative;
+		width: 100%;
+		img {
+			position: relative;
+			width: 100%;
+			height: auto;
+			display: block;
+			margin-top: 7rem;
+		}
+	}
+	.gotobanner {
+		position: relative;
+		width: 100%;
+		height: 12vw;
+		margin-top: 10vw;
+		@include flexbox();
+		.goto {
+			position: relative;
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			@include box-sizing(border-box);
+			padding: 0 10%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			&.right {
+				.goto-title {
+					text-align: right;
+				}
+				.goto-sub {
+					text-align: right;
+				}
+				.goto-arrow {
+					margin-left: calc(100% - 3rem);
+					img{
+						@include transform(rotateY(180deg));
+					}
+				}
+			}
+			&:hover {
+				.goto-arrow {
+					@include transform(translateX(-10px));
+				}
+				&.right {
+					.goto-arrow {
+						@include transform(translateX(10px));
+					}
+				}
+			}
+			.goto-title {
+				position: relative;
+				width: 100%;
+				font-size: 2.25rem;
+				color: $white;
+				line-height: 1;
+				font-family: 'Century Gothic';
+				font-weight: bold;
+				margin-top: 2rem;
+			}
+			.goto-sub {
+				position: relative;
+				width: 100%;
+				font-size: 1.625rem;
+				color: $white;
+				line-height: 1;
+				font-family: 'Noto Sans KR';
+				font-weight: 300;
+				margin-top: 0.8rem;
+			}
+			.goto-arrow {
+				position: relative;
+				width: 3rem;
+				height: 2.25rem;
+				display: inline-block;
+				margin-top: 2.5rem;
+				@include transition(all 0.3s ease);
+				img {
+					position: relative;
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1600px) {
