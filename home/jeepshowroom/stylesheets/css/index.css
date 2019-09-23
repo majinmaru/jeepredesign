@@ -63,14 +63,30 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot
 .container .content-second { position: relative; width: 100%; margin-top: 3rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 10%; }
 .container .content-second .content-second__title { position: relative; width: 100%; text-align: center; color: #111111; font-family: 'Noto Sans KR'; font-size: 1.75rem; }
 .container .content-second .content-second__list { position: relative; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; }
-.container .content-second .content-second__list .showroom { position: relative; width: calc(100% / 3); display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 2%; }
+.container .content-second .content-second__list .showroom { position: relative; width: calc(100% / 3); display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 2%; cursor: pointer; }
+.container .content-second .content-second__list .showroom:hover .showroom-img img { -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
 .container .content-second .content-second__list .showroom:hover .showroom-title .showroom-title__plus img { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
-.container .content-second .content-second__list .showroom .showroom-img { position: relative; width: 100%; height: 15rem; overflow: hidden; margin-top: 3rem; }
-.container .content-second .content-second__list .showroom .showroom-img img { position: relative; width: 100%; display: block; }
+.container .content-second .content-second__list .showroom .showroom-img { position: relative; width: 100%; height: 15rem; overflow: hidden; margin-top: 3rem; overflow: hidden; }
+.container .content-second .content-second__list .showroom .showroom-img img { position: relative; width: 100%; display: block; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
 .container .content-second .content-second__list .showroom .showroom-title { width: 100%; height: 2.25rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 1rem; }
-.container .content-second .content-second__list .showroom .showroom-title .showroom-title__text { display: inline-block; position: relative; width: calc(100% - 2.25rem); color: #111111; font-family: 'Noto Sans KR'; font-size: 1rem; }
+.container .content-second .content-second__list .showroom .showroom-title .showroom-title__text { display: inline-block; position: relative; width: calc(100% - 2.25rem); color: #111111; font-family: 'Noto Sans KR'; font-size: 1.125rem; cursor: pointer; }
+.container .content-second .content-second__list .showroom .showroom-title .showroom-title__text:hover { text-decoration: underline; }
 .container .content-second .content-second__list .showroom .showroom-title .showroom-title__plus { display: inline-block; position: relative; width: 2.25rem; height: 2.25rem; }
 .container .content-second .content-second__list .showroom .showroom-title .showroom-title__plus img { position: relative; width: 100%; height: auto; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+.container .content-second .showroom-more { margin-top: 4rem; width: 17%; margin-left: 41.5%; height: 4.125rem; text-decoration: none; cursor: pointer; background-color: transparent; border: 1px solid #ffb609; text-align: center; font-size: 1rem; font-family: 'Noto Sans KR'; line-height: 4.125rem; }
+.container .content-second .showroom-more:hover { background-color: #ffb609; }
+.container .gotobanner { position: relative; width: 100%; height: 12vw; margin-top: 7vw; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.container .gotobanner .goto { position: relative; width: 50%; height: 100%; display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 10%; background-size: cover; background-repeat: no-repeat; cursor: pointer; }
+.container .gotobanner .goto.right .goto-title { text-align: right; }
+.container .gotobanner .goto.right .goto-sub { text-align: right; }
+.container .gotobanner .goto.right .goto-arrow { margin-left: calc(100% - 3rem); }
+.container .gotobanner .goto.right .goto-arrow img { -webkit-transform: rotateY(180deg); -ms-transform: rotateY(180deg); transform: rotateY(180deg); }
+.container .gotobanner .goto:hover .goto-arrow { -webkit-transform: translateX(-10px); -ms-transform: translateX(-10px); transform: translateX(-10px); }
+.container .gotobanner .goto:hover.right .goto-arrow { -webkit-transform: translateX(10px); -ms-transform: translateX(10px); transform: translateX(10px); }
+.container .gotobanner .goto .goto-title { position: relative; width: 100%; font-size: 2.25rem; color: #fff; line-height: 1; font-family: 'Century Gothic'; font-weight: bold; margin-top: 2rem; }
+.container .gotobanner .goto .goto-sub { position: relative; width: 100%; font-size: 1.625rem; color: #fff; line-height: 1; font-family: 'Noto Sans KR'; font-weight: 300; margin-top: 0.8rem; }
+.container .gotobanner .goto .goto-arrow { position: relative; width: 3rem; height: 2.25rem; display: inline-block; margin-top: 2.5rem; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+.container .gotobanner .goto .goto-arrow img { position: relative; width: 100%; height: auto; display: block; }
 
 @media screen and (min-width: 768px) and (max-width: 1600px) { html { font-size: 14px; } }
 

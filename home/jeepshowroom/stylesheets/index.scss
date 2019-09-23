@@ -193,7 +193,13 @@ html {
 				display: inline-block;
 				@include box-sizing(border-box);
 				padding: 0 2%;
+				cursor: pointer;
 				&:hover {
+					.showroom-img{
+						img {
+							@include transform(scale(1.05));
+						}
+					}
 					.showroom-title {
 						.showroom-title__plus {
 							img {
@@ -208,10 +214,12 @@ html {
 					height: 15rem;
 					overflow: hidden;
 					margin-top: 3rem;
+					overflow: hidden;
 					img {
 						position: relative;
 						width: 100%;
 						display: block;
+						@include transition(all 0.3s ease);
 					}
 				}
 				.showroom-title {
@@ -226,7 +234,11 @@ html {
 						width: calc(100% - 2.25rem);
 						color: $black;
 						font-family: 'Noto Sans KR';
-						font-size: 1rem;
+						font-size: 1.125rem;
+						cursor: pointer;
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 					.showroom-title__plus {
 						display: inline-block;
@@ -240,6 +252,99 @@ html {
 							@include transition(all 0.3s ease);
 						}
 					}
+				}
+			}
+		}
+		.showroom-more {
+			margin-top: 4rem;
+			width: 17%;
+			margin-left: 41.5%;
+			height: 4.125rem;
+			text-decoration: none;
+			cursor: pointer;
+			background-color: transparent;
+			border: 1px solid $yellow;
+			text-align: center;
+			font-size: 1rem;
+			font-family: 'Noto Sans KR';
+			line-height: 4.125rem;
+			&:hover {
+				background-color: $yellow;
+			}
+		}
+	}
+	.gotobanner {
+		position: relative;
+		width: 100%;
+		height: 12vw;
+		margin-top: 7vw;
+		@include flexbox();
+		.goto {
+			position: relative;
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			@include box-sizing(border-box);
+			padding: 0 10%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			&.right {
+				.goto-title {
+					text-align: right;
+				}
+				.goto-sub {
+					text-align: right;
+				}
+				.goto-arrow {
+					margin-left: calc(100% - 3rem);
+					img{
+						@include transform(rotateY(180deg));
+					}
+				}
+			}
+			&:hover {
+				.goto-arrow {
+					@include transform(translateX(-10px));
+				}
+				&.right {
+					.goto-arrow {
+						@include transform(translateX(10px));
+					}
+				}
+			}
+			.goto-title {
+				position: relative;
+				width: 100%;
+				font-size: 2.25rem;
+				color: $white;
+				line-height: 1;
+				font-family: 'Century Gothic';
+				font-weight: bold;
+				margin-top: 2rem;
+			}
+			.goto-sub {
+				position: relative;
+				width: 100%;
+				font-size: 1.625rem;
+				color: $white;
+				line-height: 1;
+				font-family: 'Noto Sans KR';
+				font-weight: 300;
+				margin-top: 0.8rem;
+			}
+			.goto-arrow {
+				position: relative;
+				width: 3rem;
+				height: 2.25rem;
+				display: inline-block;
+				margin-top: 2.5rem;
+				@include transition(all 0.3s ease);
+				img {
+					position: relative;
+					width: 100%;
+					height: auto;
+					display: block;
 				}
 			}
 		}

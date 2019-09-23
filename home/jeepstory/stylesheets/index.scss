@@ -59,6 +59,74 @@ html {
 			}
 		}
 	}
+	.content-first {
+		position: relative;
+		width: 100%;
+		@include flexbox();
+		.content-first__left {
+			width: 23.6%;
+			display: inline-block;
+			position: relative;
+			background-color: $white;
+		}
+		.content-first__right {
+			width: 76.4%;
+			display: inline-block;
+			position: relative;
+			background-color: $white;
+			margin-top: -9.375rem;
+			.right-title {
+				width: 100%;
+				position: relative;
+				padding-left: 9%;
+				@include box-sizing(border-box);
+				.right-title__indicator {
+					width: 3rem;
+					position: relative;
+					margin-top: -1.5rem;
+					img {
+						position: relative;
+						width: 100%;
+					}
+				}
+				.right-title__text {
+					width: 100%;
+					position: relative;
+					margin-top: 1.25rem;
+					font-size: 2.5rem;
+					color: $black;
+					font-family: 'Noto Sans KR';
+					font-weight: bold;
+				}
+			}
+			.right-content {
+				position: relative;
+				width: 100%;
+				padding-right: 16.7%;
+				padding-left: 9%;
+				@include box-sizing(border-box);
+				.right-content__text {
+					width: 93%;
+					font-size: 1.125rem;
+					line-height: 1.8;
+					font-family: 'Noto Sans KR';
+					word-wrap: break-word;
+					word-break: keep-all;
+					margin-top: 2rem;
+				}
+				.right-content__img {
+					position: relative;
+					width: 100%;
+					@include box-sizing(border-box);
+					margin-top: 5rem;					
+					img {
+						position: relative;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1600px) {
